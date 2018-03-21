@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button class="btn btn-danger">123</button>
+    <button class="btn btn-warning" @click="showToastr">show</button>
+    <button class="btn btn-secondary" @click="hideToastr">hide</button>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -91,13 +92,22 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+    showToastr: () => {
+      toastr.warning('aaaaabbbbbbb')
+    },
+    hideToastr: () => {
+      toastr.clear()
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
