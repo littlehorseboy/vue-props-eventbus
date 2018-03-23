@@ -29,7 +29,7 @@ export default {
     },
     product: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           name: 'default name',
           description: 'default description',
@@ -44,25 +44,25 @@ export default {
   },
   data () {
     return {
-      //無須通知父組件 madeFrom 異動資訊
+      // 無須通知父組件 madeFrom 異動資訊
       internalMadeFrom: this.madeFrom
     }
   },
   computed: {
     clonedMadeFrom: {
-      get: function() {
+      get: function () {
         return this.madeFrom
       },
-      set: function(newValue) {
+      set: function (newValue) {
         this.$emit('madeFromChanged', newValue)
       }
     }
   },
   methods: {
-    modifyMadeFrom: function() {
+    modifyMadeFrom: function () {
       this.clonedMadeFrom = 'Japan' + new Date().getSeconds()
     },
-    modifyProductPrice: function() {
+    modifyProductPrice: function () {
       this.product.price += 1
     }
   }
@@ -71,10 +71,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .product-card {
-    /* width: 400px; */
-  }
-
   .modify-link {
     cursor: pointer;
     color: blue;

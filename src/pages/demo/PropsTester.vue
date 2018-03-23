@@ -49,11 +49,16 @@ export default {
     }
   },
   methods: {
-    showMoreInfo: function(id) {
+    showMoreInfo: function (id) {
       toastr.info(`show ${id} info called by sub component!!`, 'More Info')
     },
-    onmadeFromChanged: function(updatedMadeFrom) {
+    onmadeFromChanged: function (updatedMadeFrom) {
       this.madeFrom = updatedMadeFrom
+
+      this.$bus.$emit('specialEvent', {
+        msg: 'This message came from the specialEvent.',
+        title: 'Trigger by PropsTester'
+      })
     }
   },
   components: {

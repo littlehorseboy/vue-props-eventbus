@@ -10,13 +10,18 @@
         <img src="../assets/logo.png" style="width: 50px; height: 50px;">
         <ul>
           <li>
-            <router-link :to="{ path: '/demo'}" exact>Basic Control</router-link>
+            <router-link :to="{ path: '/home'}" exact>Welcome</router-link>
           </li>
           <li>
-            <router-link :to="{ name: 'propsTester'}" exact>Props Tester</router-link>
+            <router-link :to="{ name: 'hello'}" exact>Hello</router-link>
           </li>
           <li>
-            <router-link :to="{ name: 'tabTester'}" exact>Tab Tester</router-link>
+            <!-- 傳遞參數至動態路由 - URL -->
+            <router-link :to="{ path: '/home/introBranch/Taipei'}">Intro Taipei</router-link>
+          </li>
+          <li>
+            <!-- 傳遞參數至動態路由 - Params -->
+            <router-link :to="{ name: 'introBranch', params: { branchName: 'New York' }}">Intro New York</router-link>
           </li>
         </ul>
 
@@ -32,7 +37,7 @@
 
 <script>
 export default {
-  name: 'demo',
+  name: 'home',
   data () {
     return {
 

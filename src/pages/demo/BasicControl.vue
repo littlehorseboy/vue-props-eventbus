@@ -18,15 +18,15 @@ export default {
     }
   },
   computed: {
-    status: function() {
-      return '我出生於' + this.birthYear + '年';
+    status: function () {
+      return '我出生於' + this.birthYear + '年'
     },
     age: {
-      get: function() {
-        return new Date().getFullYear() - this.birthYear;
+      get: function () {
+        return new Date().getFullYear() - this.birthYear
       },
-      set: function(v) {
-        this.birthYear = new Date().getFullYear() - v;
+      set: function (v) {
+        this.birthYear = new Date().getFullYear() - v
       }
     }
   },
@@ -36,7 +36,7 @@ export default {
     }
   },
   methods: {
-    showStatus: function() {
+    showStatus: function () {
       toastr.success(this.status, 'User Status')
     }
   }

@@ -7,7 +7,15 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    this.$bus.$on('specialEvent', function (event) {
+      toastr.info(event.msg, event.title)
+    })
+  },
+  beforeDestroy: function () {
+    this.$bus.$off('specialEvent')
+  }
 }
 </script>
 
