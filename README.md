@@ -1,30 +1,13 @@
-# bootstrap-vue
+# vue & vuex
+這裡的 code 幾乎都是參照某位大大的教學而來的
+[跟著 Vue 闖蕩前端世界](https://dotblogs.com.tw/wasichris/2017/02/28/215539/)
+作者大大還有在寫續作的樣子
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- node.js 及 vscode 設置
+- vue-cli 及 webpack 檔案說明
+- toastr
+- vue 基礎語法
+- 父子組件溝通 props / emit
+- vue-router
+- router-link
+- vue-i18n
